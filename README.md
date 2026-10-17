@@ -5,6 +5,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/xhxmn/tiny-ray/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/xhxmn/tiny-ray/actions/workflows/ci.yml/badge.svg"></a>
   <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg">
   <img alt="Node.js >= 18" src="https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg">
   <img alt="Dependencies: 0" src="https://img.shields.io/badge/dependencies-0-brightgreen.svg">
@@ -48,7 +49,7 @@ Node.js 18 or newer. That is the whole list.
 ## Quick start
 
 ```bash
-git clone https://github.com/<your-name>/tiny-ray.git
+git clone https://github.com/xhxmn/tiny-ray.git
 cd tiny-ray
 
 # Render the default scene into your terminal
@@ -277,23 +278,6 @@ including the shadow and reflection rays a sample spawns. The README images take
 | `docs/neon.png` | 1000×563 | 8 | ~3 s |
 
 A 100×56 terminal preview is sub-second.
-
-## Publishing this repository
-
-Everything is ready to push — only the URLs are placeholders.
-
-1. Create an empty repository on GitHub, for example `tiny-ray`.
-2. Push it:
-   ```bash
-   git remote add origin https://github.com/<your-name>/tiny-ray.git
-   git push -u origin main
-   ```
-3. The workflow in `.github/workflows/ci.yml` runs on the first push. Once it is
-   green, add the badge at the top of this README:
-   ```markdown
-   [![CI](https://github.com/<your-name>/tiny-ray/actions/workflows/ci.yml/badge.svg)](https://github.com/<your-name>/tiny-ray/actions/workflows/ci.yml)
-   ```
-4. Optional: `npm publish` works as-is (`bin`, `files` and `exports` are set).
 
 ## License
 

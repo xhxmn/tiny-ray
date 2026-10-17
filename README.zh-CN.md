@@ -5,6 +5,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/xhxmn/tiny-ray/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/xhxmn/tiny-ray/actions/workflows/ci.yml/badge.svg"></a>
   <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg">
   <img alt="Node.js >= 18" src="https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg">
   <img alt="Dependencies: 0" src="https://img.shields.io/badge/dependencies-0-brightgreen.svg">
@@ -44,7 +45,7 @@ Node.js 18 或更高版本。就这些。
 ## 快速开始
 
 ```bash
-git clone https://github.com/<your-name>/tiny-ray.git
+git clone https://github.com/xhxmn/tiny-ray.git
 cd tiny-ray
 
 # 在终端里渲染默认场景
@@ -268,23 +269,6 @@ README 里的几张图耗时：
 | `docs/neon.png` | 1000×563 | 8 | 约 3 秒 |
 
 100×56 的终端预览不到一秒。
-
-## 发布到 GitHub
-
-仓库已经准备好推送，只有 URL 还是占位符。
-
-1. 在 GitHub 上建一个空仓库，例如 `tiny-ray`。
-2. 推送：
-   ```bash
-   git remote add origin https://github.com/<your-name>/tiny-ray.git
-   git push -u origin main
-   ```
-3. 第一次推送后 `.github/workflows/ci.yml` 会自动跑起来。等它变绿，把徽章加到
-   本文件顶部：
-   ```markdown
-   [![CI](https://github.com/<your-name>/tiny-ray/actions/workflows/ci.yml/badge.svg)](https://github.com/<your-name>/tiny-ray/actions/workflows/ci.yml)
-   ```
-4. 可选：`npm publish` 可以直接用（`bin`、`files`、`exports` 都已配置好）。
 
 ## 许可证
 
