@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [18, 20, 22, 24]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Smoke test the CLI
+        run: |
+          node bin/tiny-ray.js --help > /dev/null
+          node bin/tiny-ray.js --list > /dev/null
+          node bin/tiny-ray.js --scene neon --width 60 --height 34 --samples 1 --ascii > /dev/null
+          node bin/tiny-ray.js --scene planets --width 120 --height 68 --samples 1 --out /tmp/smoke.png

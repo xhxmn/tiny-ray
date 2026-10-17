@@ -1,0 +1,17 @@
+# Dependencies (there are none, but `npm install` or `pnpm install` may still create this)
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+
+# Rendered output that is not part of the documentation
+custom.png
+out/
+*.ppm

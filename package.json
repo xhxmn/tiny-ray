@@ -1,0 +1,38 @@
+{
+  "name": "tiny-ray",
+  "version": "1.0.0",
+  "description": "A tiny, zero-dependency ray tracer that renders scenes to truecolor ANSI, PNG, or PPM.",
+  "keywords": [
+    "raytracer",
+    "ray-tracing",
+    "graphics",
+    "terminal",
+    "ansi",
+    "truecolor",
+    "png",
+    "cli",
+    "zero-dependency"
+  ],
+  "license": "MIT",
+  "author": "tiny-ray contributors",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": "./src/index.js",
+  "bin": {
+    "tiny-ray": "./bin/tiny-ray.js"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test",
+    "demo": "node bin/tiny-ray.js --scene spheres",
+    "demo:neon": "node bin/tiny-ray.js --scene neon",
+    "render": "node bin/tiny-ray.js --scene spheres --width 1200 --height 675 --samples 4 --out docs/demo.png",
+    "render:gallery": "node scripts/render-gallery.js"
+  }
+}
